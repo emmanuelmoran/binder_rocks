@@ -11,12 +11,12 @@ if macro == "1":
                  1- Mayor a 90%
                  2- Entre 10-90%
                  3- Menor a 10%\n''')
-    perVi = input('''Introduzca en número entero el porcentaje de vidrio: ''')
+    #perVi = input('''Introduzca en número entero el porcentaje de vidrio: ''')
 # Clase 01. Roca holohialina vitrofídica
-    if vidrio == "1" and perVi >= 90:
+    if vidrio == "1":
         print("Roca holohialina vitrofídica (Obsidiana vitrofídica)")
         
-    elif vidrio =="2" and perVi >= 10:
+    elif vidrio =="2":
         matrizVitrea = input('''¿Tiene matriz vítrea?
                                 1- Si
                                 2- No\n''' )
@@ -32,7 +32,7 @@ if macro == "1":
                                     3- Felsítica
                                     4- Máfica\n
                                     ''')
-            print("Roca holocristalina porfídica con matriz " + lower(matrizHialo))
+            print("Roca holocristalina porfídica con matriz " + matrizHialo.lower())
 
             
 # ROCAS AFANITICAS/AFIRICAS
@@ -65,5 +65,3 @@ if macro == "2":
             print("Roca holocristalina afírica con textura microlítica orientada")
         elif matrizVitrea == "2":  # Matriz microlítica
             print("Roca holocristalina afírica con textura microlítica") 
-
-   
