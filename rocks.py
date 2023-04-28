@@ -1,23 +1,23 @@
 
-##############################################################
-#                ROCAS FANERÍTICAS/PORFIDICAS                #
-##############################################################
-
 # Paso 1. Determinar si la roca tiene macrocristales
 macro = input('''¿La roca tiene macrocristales? 
                  1- SI  
                  2- NO:''')
 
+##############################################################
+#        ROCAS FANERÍTICAS/PORFIDICAS (MACROCRISTALES)   #
+##############################################################
 if macro == "1":
     vidrio = input('''¿Cuál es el porcentaje de vidrio? 
                  1- Mayor a 90%
                  2- Entre 10-90%
                  3- Menor a 10%''')
-# Clase 01. Pórfido Holohialino vitrofídico.
-    if vidrio == "1":
-        print("Roca holohialina porfídica-vitrofídica")
+    perVi = input('''Introduzca en número entero el porcentaje de vidrio: ''')
+# Clase 01. Roca holohialina vitrofídica
+    if vidrio == "1" and perVi >= 90:
+        print("Roca holohialina vitrofídica (Obsidiana vitrofídica)")
         
-    elif vidrio =="2":
+    elif vidrio =="2" and perVi >= 10:
         matrizVitrea = input('''¿Tiene matriz vítrea?
                                 1- Si
                                 2- No''' )
@@ -33,7 +33,7 @@ if macro == "1":
                                     3- Felsítica
                                     4- Máfica
                                     ''')
-            print("Roca hialocristalina porfídica con matriz " + lower(matrizHialo)
+            print("Roca holocristalina porfídica con matriz " + lower(matrizHialo)
 
             
 # ROCAS AFANITICAS/AFIRICAS
@@ -45,7 +45,7 @@ elif macro == "2":
     
 # Clase 01. Holohialina afírica, obsidiana.
     if vidrio == "1":
-        print("Roca holohialina afírica (Obsidianas)")     
+        print("Roca holohialina afírica (Obsidianas afírica)")     
         
 # Clase 02. Hialocristalina afírica
     elif vidio =="2":                                     
