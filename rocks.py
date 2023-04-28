@@ -1,8 +1,7 @@
-
 # Paso 1. Determinar si la roca tiene macrocristales
 macro = input('''¿La roca tiene macrocristales? 
                  1- SI  
-                 2- NO:''')
+                 2- NO:\n''')
 
 ##############################################################
 #        ROCAS FANERÍTICAS/PORFIDICAS (MACROCRISTALES)   #
@@ -11,7 +10,7 @@ if macro == "1":
     vidrio = input('''¿Cuál es el porcentaje de vidrio? 
                  1- Mayor a 90%
                  2- Entre 10-90%
-                 3- Menor a 10%''')
+                 3- Menor a 10%\n''')
     perVi = input('''Introduzca en número entero el porcentaje de vidrio: ''')
 # Clase 01. Roca holohialina vitrofídica
     if vidrio == "1" and perVi >= 90:
@@ -20,28 +19,28 @@ if macro == "1":
     elif vidrio =="2" and perVi >= 10:
         matrizVitrea = input('''¿Tiene matriz vítrea?
                                 1- Si
-                                2- No''' )
+                                2- No\n''' )
 # Clase 02. Pórfido Hialocristalino vitrofídico
-        if matrizVirea == "1":
+        if matrizVitrea == "1":
             print("Roca vitrofídica / Vitrófido")
             
 # Clase 03. Pórfido holocristalino              
-        elif matrizVirea == "2":
+        elif matrizVitrea == "2":
             matrizHialo = input( '''Determinar el tipo de matriz:
                                     1- Microlítica
                                     2- Microlítica fluidal
                                     3- Felsítica
-                                    4- Máfica
+                                    4- Máfica\n
                                     ''')
-            print("Roca holocristalina porfídica con matriz " + lower(matrizHialo)
+            print("Roca holocristalina porfídica con matriz " + lower(matrizHialo))
 
             
 # ROCAS AFANITICAS/AFIRICAS
-elif macro == "2":
+if macro == "2":
     vidrio = input('''¿Cuál es el porcentaje de vidrio? 
                  1- Mayor a 90%
                  2- Entre 10-90%
-                 3- Menor a 10%''')
+                 3- Menor a 10%?\n''')
     
 # Clase 01. Holohialina afírica, obsidiana.
     if vidrio == "1":
@@ -51,7 +50,7 @@ elif macro == "2":
     elif vidio =="2":                                     
         matrizMicro = input('''¿Determinar el tipo de microlitos y mesostais?
                                 1- Microlitos orientados en matriz vítrea
-                                2- Microlitos no orientados''' )
+                                2- Microlitos no orientados\n''' )
         if matrizMicro == "1":    # Hialocristalina afírica microlítica
             print("Roca hialocristalina afírica con textura microlítica orientada")
         elif matrizMicro == "2":  # Hialocristalina afírica microlítica
@@ -61,11 +60,10 @@ elif macro == "2":
     elif vidio =="3":                                     
         matrizMicro = input('''¿Determinar el tipo de microlitos y mesostais?
                                 1- Microlitos orientados en matriz vítrea
-                                2- Microlitos no orientados''' )
+                                2- Microlitos no orientados\n''' )
         if matrizMicro == "1":    # Matriz microlítica orientada
             print("Roca holocristalina afírica con textura microlítica orientada")
-        elif matrizVirea == "2":  # Matriz microlítica
+        elif matrizVitrea == "2":  # Matriz microlítica
             print("Roca holocristalina afírica con textura microlítica") 
 
-    
-    
+   
